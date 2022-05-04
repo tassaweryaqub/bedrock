@@ -1,0 +1,37 @@
+@use "colors" as *;
+@use "fonts" as *;
+@use "spacing" as *;
+
+// Form variables
+
+//spacing
+$padding-y: 14px;
+$padding-x: 24px;
+$gutter-y: 8px;
+$gutter-x: 20px;
+
+
+// general styles
+$radius: 0;
+$labelsize : $font-size-text;
+$fontsize: $font-size-text;
+$border: 2px;
+
+
+//colors
+$labelcolor: $text-color;
+$textcolor: $text-color;
+$placeholdercolor: rgba($text-color, .3);
+$placeholdercolor--focused: $text-color;
+
+$bordercolor: $standard-border;
+$bordercolor--focused: $standard-border;
+$backgroundcolor: $white;
+
+$backgroudcolor--error: rgba(red, .8);
+$textcolor--error: red;
+
+
+
+$buttonplacement: left;
+

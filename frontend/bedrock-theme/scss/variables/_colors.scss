@@ -1,0 +1,58 @@
+// Colors
+// ------------------------------------------------------------
+$green:                    #00764c;
+$blue:                     #50c0f1;
+$yellow:                   #e8c312;
+$red:                      #c6002a;
+$button-color:             #c6002a; 
+$hover-color-box:          #d74d6a; 
+$text-is-selecter-read:    #e899aa;     
+$p-is-selected-read:       #a0a0a0;                
+
+$white:                     #fff !default; 
+$background-color:          #F3F3F3;
+$black:                     #000;
+$text-color:                #555555;
+$text-placeholder:          #9A9A9A;
+$link-color:                $blue;
+$transparent-color:         rgb(0 0 0 / 90%);
+$toggle-color:               #EAEAEA; 
+
+$blue-300:                   #bdd8ee;
+$blue-400:                   #357ca2;
+
+$grey-800:                   #333 !default;
+$grey-700:                   $text-color!default;
+$grey-600:                   #f4f4f4!default;
+$grey-500:                   #fff!default;
+$grey-400:		     #C6C6C6;
+$grey-350:		     #EAEAEA;
+$grey-300:		     #f9f9f9;
+
+
+
+$primary-color:             $red;
+$secondary-color:           $grey-500;
+$tertiary-color:            $yellow;
+
+
+ 
+
+
+$box-shadow:                  0px 0px 6px rgba(0,0,0,0.1);
+
+$standard-border:                1px #C6C6C6 solid;
+
+$theme-color: (
+        "white":           $white,
+        "blue":            $blue,
+        "green":           $green,
+        "yellow":          $yellow,
+);
+
+$theme-font-color: (
+        "white":           $blue,
+        "blue":            $white,
+        "green":           $white,
+        "yellow":          $blue,
+);

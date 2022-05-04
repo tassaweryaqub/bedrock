@@ -1,0 +1,39 @@
+@use "../utils/respond-to" as *;
+@use "variables" as *;
+
+/* stylelint-disable max-line-length */
+html {
+	box-sizing: border-box;
+
+	min-height: 100%;
+  	font-size: 62.5%;
+  	-webkit-font-smoothing: antialiased;
+
+	background-color: $white;
+}
+
+// Credit: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+* {
+	&,
+	&::before,
+	&::after {
+		box-sizing: border-box;
+	}
+}
+
+@-ms-viewport { /* stylelint-disable-line */
+	width: device-width;
+}
+
+body {
+	// Fix scrollbars: http://msdn.microsoft.com/en-us/library/ie/hh771902(v=vs.85).aspx
+
+	//font-family: 'Fredericka the Great', cursive;
+//font-family: 'PT Sans', sans-serif;
+//font-family: 'Roboto', sans-serif;
+font-family: $font-base; 
+font-size: 18px; 
+line-height: 1em;
+
+
+}

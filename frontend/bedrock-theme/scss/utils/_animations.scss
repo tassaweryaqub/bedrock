@@ -1,0 +1,23 @@
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+    visibility: hidden;
+  }
+  100% {
+    opacity:1;
+    visibility: visible;
+  }
+}
+
+@keyframes slideIn{
+  0% {
+    opacity:0;
+    visibility: hidden;
+    bottom: -100%;
+  }
+  100% {
+    opacity:1;
+    visibility: visible;
+    bottom: 0;
+  }
+}

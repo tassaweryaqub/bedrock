@@ -1,0 +1,32 @@
+// Border
+// ------------------------------------------------------------
+$border-radius:                 25px;
+$border-radius-button:          50px;
+$small-border-radius:           5px;
+
+
+// Spacing
+// ------------------------------------------------------------
+$space-xs:						0.5rem;
+$space-s:						1.5rem;
+$space-m:						3.5rem;
+$space-l:						5rem;
+$space-xl:						12rem;
+$space-xxl:						12rem;
+
+$sides: (
+        'top',
+        'right',
+        'bottom',
+        'left',
+);
+
+$spaces: (
+        'none':               0,
+        'xs':						$space-xs,
+        's':						$space-s,
+        'm':						$space-m,
+        'l':						$space-l,
+        'xl':						$space-xl,
+        'xxl':					   $space-xxl,
+);

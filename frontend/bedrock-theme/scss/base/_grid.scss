@@ -1,0 +1,61 @@
+@use "variables" as *;
+@use "../utils/ezpz" as *;
+
+// Generate all the EZPZ things
+// ==========================================================================
+@mixin base() {
+  #{$ezpz-namespace} {
+    @include generate-full-grid();
+    @include generate-grid-layout();
+    @include generate-all-cells();
+    @include generate-grid-content-stretch();
+
+    // Optional
+    @if $ezpz-grid-align {
+      @include generate-grid-align();
+    }
+
+    @if $ezpz-grid-wrap {
+      @include generate-grid-wrap();
+    }
+
+    @if $ezpz-cell-order {
+      & > #{$ezpz-cell-namespace} {
+        @include generate-cell-order();
+      }
+    }
+
+    @if $ezpz-cell-offset {
+      & > #{$ezpz-cell-namespace} {
+        @include generate-cell-offset();
+      }
+    }
+
+    @if $ezpz-gutter-collapse {
+      @include grid-gutter-collapsed();
+      @include grid-gutter-expanded();
+
+      & > #{$ezpz-cell-namespace} {
+        @include cell-gutter-collapsed();
+        @include cell-gutter-expanded();
+      }
+    }
+
+    @if $ezpz-cell-align {
+      & > #{$ezpz-cell-namespace} {
+        @include generate-cell-align();
+      }
+    }
+
+    & > #{$ezpz-cell-namespace} {
+      @include generate-cell-content-stretch();
+    }
+
+    // Responsive classes
+    @include create-responsive-classes();
+  }
+}
+
+@if ($ezpz-auto-generate) {
+  @include base();
+}

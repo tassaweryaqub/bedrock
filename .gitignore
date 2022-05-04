@@ -1,0 +1,88 @@
+# Application
+web/app/plugins/*
+!web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/upgrade
+web/app/uploads/*
+web/app/themes/*/assets/uploads/*
+!web/app/uploads/.gitkeep
+web/app/themes/twize
+
+old
+
+_forms
+
+node_modules
+
+# Special plugins
+!web/app/plugins/edit-flow
+!web/app/plugins/enhanced-media-library
+!web/app/plugins/gravity-forms-custom-post-types
+!web/app/plugins/gravityformspolls
+!web/app/plugins/punt-magazines
+!web/app/plugins/punt-notifications.php
+!web/app/plugins/twz-sync
+
+# WordPress
+web/wp
+web/.htaccess
+
+# Logs
+*.log
+/log/
+
+# Dotenv
+/.env
+.env.*
+!.env.local
+!.env.example
+
+# Composer
+/vendor
+
+# WP-CLI
+wp-cli.local.yml
+
+# Installer
+twz-install.sh
+
+# Cache
+/wp-content/wp-cache-config.php
+
+# Front-end and assets
+*.css.map
+*.js.map
+frontend/jspm_packages/
+.sass-cache/
+*.scssc
+*.sassc
+*.css.map
+/assets/*/uploads
+/assets/js/main*
+/assets/*/uploads/
+/assets/css/main*
+/twz-manifest.json
+
+# Node
+frontend/node_modules/
+frontend/node_modules/*
+*.log
+
+# Sass cache + sourcemaps
+
+# Other
+.DS_Store
+*.rar
+.idea
+.idea/*
+.idea/
+*.zip
+*Thumbs.db
+.git/
+.vscode/
+.history
+
+# Docker
+.docker/shared/*
+/db
+#.docker/php-fpm/memory.ini

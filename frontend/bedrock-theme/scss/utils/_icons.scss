@@ -1,0 +1,89 @@
+@use "variables" as *;
+@use "sass:math";
+
+@mixin get-icon($icon: null, $place : before, $size : 1.2rem, $fill: $text-color, $stroke: transparent, $x : -50%, $y : -50%, $rotation: 0) {
+   @if($icon) {
+	  position: relative;
+	  display: inline-block;
+
+	  &:#{$place} {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(#{$x}, #{$y}) rotate(#{$rotation});
+		height: $size;
+		width: $size;
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		transition: .4s ease-in-out;
+	  }
+
+	  &:#{$place} {
+		 background-image: svg-load('#{$icon}.svg', fill=$fill, stroke=$stroke);
+	  }
+   } @else {
+	  @error 'No icon is found or given';
+   }
+}
+
+@mixin get-button-icon($icon: null, $place : after, $size : 2em, $fill: $text-color, $stroke: transparent, $x : -50%, $y : -50%, $rotation: 0) {
+   
+   @if($icon) {
+		position: relative;
+
+		//Circle
+		&:before {
+			z-index: 1;
+			position: absolute;
+			content: "";
+			height: $size*2.2;
+			width: $size*2.2;
+			transform: translateY(-50%) translateX(0) rotate(0);
+			top: 50%;
+			border-radius: 50%;
+		}
+		
+		@if(#{$place} == before) {
+			padding-left: $size*6;
+			&:before {
+				left: math.div($size,3);
+			}
+			&:after {
+				left: math.div($size,10);
+			}
+		} @else if(#{$place} == after) {
+			padding-right: $size*6;
+			&:before {
+				right: math.div($size,3);
+			}
+			&:after {
+				right: 0;
+			}
+		}
+
+	  &:after {
+		 content: '';
+		 position: absolute;
+		 display: inline-block;
+		 transform: translateY(#{$y}) translateX(#{$x}) rotate(#{$rotation});
+		 height: $size*1.4;
+		 width: $size*1.4;
+		 background-size: contain;
+		 background-position: center;
+		 background-repeat: no-repeat;
+		 top: 50%;
+		 transition: .4s ease-in-out;
+		 z-index: 1;
+		 background-image: svg-load('#{$icon}.svg', fill=$fill, stroke=$stroke);
+	  }
+	  
+	  &:hover:after {
+		 background-image: svg-load('#{$icon}.svg', fill=$fill, stroke=$stroke);
+	  }
+
+   } @else {
+	  @error 'No icon is found or given';
+   }
+}
